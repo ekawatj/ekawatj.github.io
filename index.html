@@ -3,20 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> jeff ekko holiday card 2024 </title>
+    <title>SelectStart Solutions | AI Consulting</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        img {
-            width: 860px; /* Adjust this value to change the image size */
-            margin: 10px;
+        :root {
+            --bg-color: #0d0f12;
+            --text-color: #f4f4f6;
+            --accent-color: #39ff14; /* Eclectic Neon Chartreuse */
+            --muted-color: #8a8f98;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --font-display: 'Cinzel', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Eclectic Background Elements */
+        .organic-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(57, 255, 20, 0.05) 0%, rgba(0,0,0,0) 70%);
+            top: -100px;
+            right: -100px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 4% 6rem 4%;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        h1 span {
+            display: block;
+            font-style: italic;
+            color: var(--muted-color);
+        }
+
+        .hero-lead {
+            font-size: 1.1rem;
+            color: var(--muted-color);
+            margin-bottom: 3rem;
+            max-width: 500px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+        }
+
+        /* Eclectic Geometric Graphic */
+        .hero-graphic {
+            position: relative;
+            height: 350px;
+            border-left: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle-art {
+            width: 200px;
+            height: 200px;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .circle-art::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        /* Services Section */
+        #services {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4%;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-number {
+            font-family: var(--font-sans);
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .service-card {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 3rem;
+            position: relative;
+        }
+
+        /* Asymmetric step numbers */
+        .service-card::before {
+            content: attr(data-index);
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .service-card p {
+            color: var(--muted-color);
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4% 10rem 4%;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .contact-info p {
+            color: var(--muted-color);
+            margin-top: 1.5rem;
+            max-width: 320px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        input, textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: var(--accent-color);
+        }
+
+        form button {
+            grid-column: span 2;
+            justify-self: start;
+            background: transparent;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            padding: 1rem 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 4%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-color);
+            letter-spacing: 1px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .hero-grid, .services-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            form {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            form button {
+                grid-column: span 1;
+                width: 100%;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            .hero-graphic {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <h1> happy holidays 2024</h1>
-    <img src="IMG_0551.png" alt="Image One">
-    <img src="IMG_0548.png" alt="Image Two">
-    <img src="IMG_0549.png" alt="Image Three">
-    <img src="IMG_0550.png" alt="Image Four">
+
+    <div class="organic-blob"></div>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">SelectStart<span>.</span></div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#contact">Inquire</a>
+        </div>
+    </nav>
+
+    <!-- Hero Framework -->
+    <header>
+        <div class="hero-grid">
+            <div>
+                <h1>SelectStart Solutions <span>Intelligent Integration.</span></h1>
+                <p class="hero-lead">We sculpt machine intelligence into pragmatic, high-efficiency business infrastructure. No hype. Just execution.</p>
+                <a href="#contact" class="cta-button">Initiate Project</a>
+            </div>
+            <div class="hero-graphic" aria-hidden="true">
+                <div class="circle-art"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-header">
+            <h2>Capabilities</h2>
+            <div class="section-number">// 01</div>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card" data-index="I">
+                <h3>Audit and Strategy</h3>
+                <p>Identify your top 3-5 high-leverage areas where AI integration will deliver the absolute highest return on investment.</p>
+            </div>
+            <div class="service-card" data-index="II">
+                <h3>Tool Recommendation</h3>
+                <p>Architecting the ideal technology stack. We systematically match precise AI tools to your unique workflows and financial boundaries.</p>
+            </div>
+            <div class="service-card" data-index="III">
+                <h3>Implementation</h3>
+                <p>Frictionless structural transformation. We build rigorous tactical roadmaps for rolling out brand-new AI architecture cleanly across enterprise teams.</p>
+            </div>
+            <div class="service-card" data-index="IV">
+                <h3>Team Training</h3>
+                <p>Human capital optimization. We host high-impact workshops teaching your employees exactly how core machine learning algorithms and AI-powered engines work in practical everyday operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2>Inquire</h2>
+                    <div class="section-number">// 02</div>
+                </div>
+                <p>Let's map out your systems upgrade. Reach out to schedule a private alignment session.</p>
+            </div>
+            <div>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry logged. SelectStart team will contact you shortly.');">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea rows="4" placeholder="Briefly describe your primary operational bottleneck..." required></textarea>
+                    </div>
+                    <button type="submit">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SelectStart Solutions. All structural rights reserved.</p>
+    </footer>
 
 </body>
+
 </html>
